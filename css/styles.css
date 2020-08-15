@@ -1,0 +1,257 @@
+.jumbotron, .card-body, .container, .site-header{
+    font-family: 'Raleway', serif !important;
+}
+
+.jumbotron .display-4{
+    font-weight: bold;
+}
+
+.jumbotron {
+  height: 50vh;
+  padding: 5em inherit;
+  margin-bottom: 0;
+  background-color: #53C0FB;
+  background: url('../img/cover_back.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px grey;
+}
+
+.jumbotron .lead{
+  font-size: 38px;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.site-header a {
+  color: white;
+  transition: ease-in-out color .15s;
+}
+
+.light-text {
+  color: white;
+}
+
+.site-header .dropdown-menu a {
+  color: black;
+}
+
+.dropzone{
+  border: 2px dashed #0087F7;
+  border-radius: 5px;
+  background: white;
+}
+
+.alert{
+  position: fixed;
+  top:80px;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  top:50%;
+  left: 50%;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#spinner-wrapper{
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  width:100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: 1021;
+  display: none;
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.checked {
+  color: orange;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url();
+  }
+  
+.contenedor-form {
+  position: relative;
+  background: rgba(0,0,0,.7);
+  width: 100%;
+  max-width: 500px;
+  margin: 48px auto;
+  color: #fff;
+  border-radius: 5px;
+
+  /*padding: 40px;*/
+
+}
+
+.contenedor-form .toggle {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  border-top: 2px solid rgb(248, 58, 153);
+  border-bottom: 2px solid rgb(248, 58, 153);
+  transition: all .5s ease;
+  cursor: pointer;
+
+}
+
+.contenedor-form .toggle span {
+  letter-spacing: 1px;
+}
+
+.contenedor-form .toggle:hover {
+  border-top: 2px solid #0075d9;
+  border-bottom: 2px solid #0075d9;
+}
+
+.contenedor-form h5 {
+  margin: 0 0 28px 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+} 
+
+.contenedor-form input[type="text"],
+.contenedor-form input[type="password"],
+.contenedor-form input[type="email"] {
+  outline: none;
+  background:rgba(0,0,0,.5);
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 4px solid rgb(248, 58, 153);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+  transition: all .5s ease;
+}
+
+.contenedor-form input[type="text"]:focus,
+.contenedor-form input[type="password"]:focus,
+.contenedor-form input[type="email"]:focus {
+  border-bottom: 4px solid #0075d9;
+}
+
+.contenedor-form input[type="button"] {
+  background: rgb(248, 58, 153);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.contenedor-form input[type="button"]:hover {
+  background: rgba(0,117,217,0.7);
+}
+
+.contenedor-form .reset-password {
+  background: rgba(0,117,217,0.7);
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.contenedor-form .reset-password a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.contenedor-form .formulario {
+  padding: 40px;
+  display: none;
+}
+
+.contenedor-form .formulario:nth-child(2) {
+  display: block;
+}
