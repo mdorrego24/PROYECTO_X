@@ -22,6 +22,8 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <div class="py-2 d-none d-md-inline-block site-header"  id="activo" style="color:lightgrey"><a>Bienvenido/a:</a><span id="username" >nombre</span></div>
+        <a class="py-2 d-none d-md-inline-block" href="#" onclick=logout() style="color:lightgrey"></i> Cerrar Sesión</a>
       </div>
     </nav>
     <main role="main" class="pb-5">
@@ -33,13 +35,13 @@
             <div class="row">
                 <div class="col text-right">
                     <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                        <label class="btn btn-light active" id="sortAsc" >
+                        <label class="btn btn-light active" id="AZ" >
                             <input type="radio" name="options" autocomplete="off" checked>A-Z
                         </label>
-                        <label class="btn btn-light" id="sortDesc" >
+                        <label class="btn btn-light" id="ZA" >
                             <input type="radio" name="options" autocomplete="off">Z-A
                         </label>
-                        <label class="btn btn-light" id="sortByCount" >
+                        <label class="btn btn-light" id="Cant." >
                             <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Cant.
                         </label>
                     </div>
@@ -82,10 +84,20 @@
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
     </footer>
+
+    <script type="text/javascript">
+      function actualizarNombre(){
+        var actualizo = localStorage.getItem("usuario");
+        document.getElementById("username").innerHTML = " "+ actualizo;
+      }
+      actualizarNombre();
+    </script>
+    
     <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/categories.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

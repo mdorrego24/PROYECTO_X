@@ -13,25 +13,121 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+
+  <style>
+    .puntuacion {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    }
+
+    .puntuacion input {
+    position: absolute;
+    top: -100px;
+    }
+
+
+    .puntuacion label {
+    float: right;
+    color: #c1b8b8;
+    font-size: 30px; 
+    }
+
+    .puntuacion label:hover,
+    .puntuacion label:hover ~ label,
+    .puntuacion input:checked ~ label {
+    color:orange;
+    }
+    span{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 400;
+        color: blue;
+    }
+    </style>
 </head>
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="cover.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <div class="py-2 d-none d-md-inline-block site-header"  id="activo" style="color:lightgrey"><a>Bienvenido/a:</a></span><span id="username" >nombre</span></div>
+      <a class="py-2 d-none d-md-inline-block" href="#" onclick=logout() style="color:lightgrey"></i> Cerrar Sesión</a>
     </div>
   </nav>
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+      </div>
+      <h3 id="Name"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="Description"></p>
+        </dd>
+
+        <dt>Valor del producto</dt>
+        <dd><p id="Currency" id="Cost"></p>
+        </dd>
+
+        
+        <dt>Cantidad de autos vendidos</dt>
+        <dd>
+          <p id="soldCount"></p>
+        </dd>
+
+        <dt>Categoria del producto</dt>
+        <dd>
+          <p id="Category"></p>
+        </dd>
+
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productInfoImagesGallery">
+          </div>
+        </dd>
+
+        <dt>Productos Relacionados</dt>
+        <dd>
+        <p id="relatedProducts"></p>
+        </dd>
+
+      </dl>
+  
+  
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+    <dt>Comentarios</dt>
+    <div id="comentarios"></div>
+    <div class="puntuacion">
+      <input id="radio1" type="radio" name="estrellas" value="5"onclick="document.getElementById('valor').innerHTML='5'"><!--
+      --><label for="radio1">★</label><!--
+      --><input id="radio2" type="radio" name="estrellas" value="4" onclick="document.getElementById('valor').innerHTML='4'"><!--
+      --><label for="radio2">★</label><!--
+      --><input id="radio3" type="radio" name="estrellas" value="3" onclick="document.getElementById('valor').innerHTML='3'"><!--
+      --><label for="radio3">★</label><!--
+      --><input id="radio4" type="radio" name="estrellas" value="2"onclick="document.getElementById('valor').innerHTML='2'"><!--
+      --><label for="radio4">★</label><!--
+      --><input id="radio5" type="radio" name="estrellas" value="1" onclick="document.getElementById('valor').innerHTML='1'"><!--
+      --><label for="radio5">★</label><br>
+    </div><br>
+    Clickeaste el número: <span id="valor"></span>
+
+    <form id="comentario">
+    <h2> Agregar Comentario </h2>
+    <input type="text" id="comment">
+    <dt>Puntuación</dt>
+    <select>
+      <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+    </select>
+    <input type="button" onclick="enviar();" value="Enviar">
+</form>
+
   </div>
   <footer class="text-muted">
     <div class="container">

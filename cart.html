@@ -41,6 +41,8 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <div class="py-2 d-none d-md-inline-block site-header"  id="activo" style="color:white"><a>Bienvenido/a:</a><span id="username" >nombre</span></div>
+      <a class="py-2 d-none d-md-inline-block" href="#" onclick=logout() style="color:white"></i> Cerrar Sesión</a>
     </div>
   </nav>
   <div class="container p-5">
@@ -59,11 +61,20 @@
       <div></div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    function actualizarNombre(){
+      var actualizo = localStorage.getItem("usuario");
+      document.getElementById("username").innerHTML = " "+ actualizo;
+    }
+    actualizarNombre();
+  </script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

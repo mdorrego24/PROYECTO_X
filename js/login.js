@@ -6,8 +6,11 @@
 function login(){
     var usuario = document.getElementById("user").value;
 var contrasena = document.getElementById("pass").value;
+var localusuario;
+
     if (usuario!=""&& contrasena!=""){ 
         //document.form.submit();// 
+        localStorage.setItem("usuario",usuario)
         window.location="cover.html";
         auxi = 1;
     } 
@@ -17,4 +20,8 @@ var contrasena = document.getElementById("pass").value;
 };
 document.addEventListener("DOMContentLoaded", function(e){
 })
+function logout(){
+    localStorage.clear();
+    window.location="index.html";
+}
 
