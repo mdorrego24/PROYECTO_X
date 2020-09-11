@@ -15,27 +15,27 @@
   <link href="css/styles.css" rel="stylesheet">
 
   <style>
-    .puntuacion {
+    .score {
     position: relative;
     overflow: hidden;
     display: inline-block;
     }
 
-    .puntuacion input {
+    .score input {
     position: absolute;
     top: -100px;
     }
 
 
-    .puntuacion label {
+    .score label {
     float: right;
     color: #c1b8b8;
     font-size: 30px; 
     }
 
-    .puntuacion label:hover,
-    .puntuacion label:hover ~ label,
-    .puntuacion input:checked ~ label {
+    .score label:hover,
+    .score label:hover ~ label,
+    .score input:checked ~ label {
     color:orange;
     }
     span{
@@ -65,7 +65,6 @@
         <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
       </div>
       <h3 id="Name"></h3>
-      <hr class="my-3">
       <dl>
         <dt>Descripción</dt>
         <dd>
@@ -73,9 +72,9 @@
         </dd>
 
         <dt>Valor del producto</dt>
-        <dd><p id="Currency" id="Cost"></p>
+        <dd>
+          <p id="CurrencyCost"></p>
         </dd>
-
         
         <dt>Cantidad de autos vendidos</dt>
         <dd>
@@ -93,18 +92,28 @@
           </div>
         </dd>
 
-        <dt>Productos Relacionados</dt>
+        <dt>Productos relacionados</dt>
         <dd>
-        <p id="relatedProducts"></p>
+          <div class="row text-center text-lg-left pt-2" id="relatedProducts">
+          </div>
         </dd>
+
+        <dt>Comentarios</dt>
+        <dd>
+          <hr><br>
+          <div id="comentariosDOM"></div>
+        </dd>
+
+        <dt>Agregar nuevo</dt>
+
+        <hr>
 
       </dl>
   
   
   <div class="container p-5">
-    <dt>Comentarios</dt>
     <div id="comentarios"></div>
-    <div class="puntuacion">
+    <div class="score">
       <input id="radio1" type="radio" name="estrellas" value="5"onclick="document.getElementById('valor').innerHTML='5'"><!--
       --><label for="radio1">★</label><!--
       --><input id="radio2" type="radio" name="estrellas" value="4" onclick="document.getElementById('valor').innerHTML='4'"><!--
@@ -116,15 +125,11 @@
       --><input id="radio5" type="radio" name="estrellas" value="1" onclick="document.getElementById('valor').innerHTML='1'"><!--
       --><label for="radio5">★</label><br>
     </div><br>
-    Clickeaste el número: <span id="valor"></span>
 
     <form id="comentario">
-    <h2> Agregar Comentario </h2>
+    <h2> Agregar nuevo </h2>
     <input type="text" id="comment">
     <dt>Puntuación</dt>
-    <select>
-      <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
-    </select>
     <input type="button" onclick="enviar();" value="Enviar">
 </form>
 
