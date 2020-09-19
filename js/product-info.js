@@ -17,6 +17,8 @@ function showImagesGallery(array){//funcion para mostrar las imagenes en forma d
         `
 
         document.getElementById("productInfoImagesGallery").innerHTML = htmlContentToAppend;
+
+        
     }
 }
 document.addEventListener("DOMContentLoaded", function(e){//funcion que ejecuta la extraccion de informacion del json y se muestra en el html
