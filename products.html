@@ -22,10 +22,10 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="activo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Bienvenido/a:</a></span><span id="username" >nombre</span>
+        <button style="background-color: #0075d9;" class="btn btn-secondary dropdown-toggle" type="button" id="activo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Bienvenido/a:</a></span><span id="username" >nombre</span>
         </button>
         <div class="dropdown-menu" aria-labelledby="username">
-          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito <span class="badge" style="background-color:#0075d9;"></span></a>
           <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
           <a class="dropdown-item" href="index.html">Cerrar sesion</a>
         </div>
@@ -93,8 +93,11 @@
     <script type="text/javascript">
       function actualizarNombre(){
         var actualizo = localStorage.getItem("usuario");
-        document.getElementById("username").innerHTML = " "+ actualizo;
-      }
+        var cantidadCarrito = localStorage.getItem("productosEnCarro");
+      document.getElementById("username").innerHTML = " "+ actualizo;
+      document.getElementsByClassName("badge")[0].innerHTML = cantidadCarrito;
+      
+       }
       actualizarNombre();
     </script>
 

@@ -1,84 +1,217 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
-<html lang="en">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>eMercado - Todo lo que busques está aquí</title>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
-    }
-  </style>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="css/dropzone.css" rel="stylesheet">
-</head>
 
-<body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="cover.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="activo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Bienvenido/a:</a></span><span id="username" >nombre</span>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="username">
-        <a class="dropdown-item" href="cart.html">Mi carrito</a>
-        <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
-        <a class="dropdown-item" href="index.html">Cerrar sesion</a>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1 bg-dark">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" href="cover.html">Inicio</a>
+        <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+        <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+        <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <div class="dropdown">
+        <button style="background-color: #0075d9;" class="btn btn-secondary dropdown-toggle" type="button" id="activo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a>Bienvenido/a:</a></span><span id="username" >nombre</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="username">
+          <a class="dropdown-item" href="cart.html">Mi carrito <span class="badge" style="background-color:#0075d9;"></span></a>
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <a class="dropdown-item" href="index.html">Cerrar sesion</a>
+        </div>
       </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-
-  <script type="text/javascript">
-    function actualizarNombre(){
-      var actualizo = localStorage.getItem("usuario");
-      document.getElementById("username").innerHTML = " "+ actualizo;
-    }
-    actualizarNombre();
-  </script>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/login.js"></script>
-</body>
-
-</html>
+    </nav>
+    <div class="container">
+      <div class="text-center p-4">
+        <h2><strong>Carrito de compras</strong></h2>
+        <p class="lead">Ve aquí los articulos que vas a comprar</p>
+        <hr>
+      </div>
+      <div class="row text-center">
+        
+        <div class="col-5">
+          <strong><p>Articulo</p></strong>
+        </div>
+        <div class="col-2">
+          <strong><p>Cantidad</p></strong>
+        </div>
+        <div class="col-2">
+          <strong><p>Precio Unitario</p></strong>
+        </div>
+        <div class="col-2">
+          <strong><p>Subtotal</p></strong>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 10px;">
+        <div class="list-group text-center" id="productos-seleccionados">
+        </div>
+      </div>
+      <br>
+      <div class="text-center p-4" id="seccionEnvios">
+        <h2> Opciones de envio</h2>
+        <p class="lead">Modalidad de envio</p>
+        <hr>
+        
+  
+        <input type="radio"  id="envio1"  name="envio"  value="15"  onchange=actualizarTotales()>
+        <label for="envio1">
+          <div>
+            <h5>Premium - 2 a 5 dias (15%)</h5>
+          </div>
+        </label> <br>
+        
+        <input type="radio" id="envio2" name="envio" value="7" onchange=actualizarTotales()>
+        <label for="envio2">
+          <div>
+            <h5>Express 5 a 8 dias (7%)</h5>
+          </div>
+        </label>
+        <br>
+        
+        <input type="radio" id="envio3" name="envio" value="5" onchange=actualizarTotales() checked>
+        <label for="envio3">
+          <div>
+            <h5>Standar 12 a 15 dias (5%)
+            </h5>
+          </div>
+        </label>
+        <br><br>
+        <h2>Direccion</h2>
+        <hr>
+        <div class="text-center" id="seccionDireccion">
+          <label style="margin: 9px 5px 9px 9px;"for="direccion"><strong>Direccion:</strong></label>
+          <input type="text" id="direccion" required>
+          <label style="margin: 9px 5px 9px 9px;"for="numero"><strong>Numero:</strong></label>  
+          <input type="text" id="numero" required><br>
+          <label style="margin: 9px 5px 9px 9px;" for="departamento"><strong>Departamento:</strong></label>
+          <input type="text" id="departamento" required>
+          <label style="margin: 9px 5px 9px 9px;" for="localidad"><strong>Localidad:</strong></label>
+          <input type="text" id="localidad" required>
+        </div>
+        <br>
+        <h2>Pago</h2>
+        <p class="lead">Forma de pago</p>
+        <input type="radio" id="credito" name="pago" value="credito" data-toggle="modal" data-target="#contidionsModal">
+        <label for="credito">
+          <div>
+            <h6>Credito</h6>
+          </div>
+        </label>
+        <input type="radio" id="debito" name="pago" value="debito" data-toggle="modal" data-target="#contidionsModal">
+        <label for="debito">
+          <div>
+            <h6>Debito</h6>
+          </div>
+        </label>
+        <input type="radio" id="efectivo" name="pago" value="efectivo">
+        <label for="efectivo">
+          <div>
+            <h6>Efectivo</h6>
+          </div>
+        </label>
+        <hr>
+        <p class="lead">Verifica el pago</p>
+        <hr>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Precio</h6>
+              <small class="text-muted">Total de tus productos</small>
+            </div>
+            <span class="text-muted" id="productCostText">-</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Porcentaje</h6>
+              <small class="text-muted">Según el tipo de envio</small>
+            </div>
+            <span class="text-muted" id="comissionText">-</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <h3>Total (US$)</h3>
+            <h3 id="totalCostText"><strong ></strong></h3>
+          </li>
+        </ul>
+        <br>
+        <button onclick="finalizarCompra()" style="background-color: #0075d9;" class="btn btn-primary" data-dismiss="modal"><strong>Comprar</strong></button>
+      </div>
+      
+      </div>
+      <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ingrese los datos de su tarjeta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container text-center">
+                <form>
+                <label for="ntarj" style="color: black;">Numero de Tarjeta:</label>
+                <input type="number" size="20" id="ntarj" required placeholder=""><br>
+                <label for="cvv" style="color: black;" >CVV:</label>
+                <input type="number" size="3" id="cvv" placeholder="" required ><br>
+                <label for="venci" style="color: black;">Fecha de vencimiento:</label>
+                <input type="month" step="1" min="9-2020"id="venci" size="7" placeholder="" required><br>
+                <label for="nombre" style="color: black;">Nombre del Titular:</label>
+                <input type="text" size="20" id="nombre" placeholder="" required>
+                <label for="ci" style="color: black;">Cedula de Identidad:</label>
+                <input type="number" size="10" id="ci" placeholder="" required><br>
+                <button class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+              </form>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    <div id="spinner-wrapper"><div class="lds-ring"> <div></div><div></div><div></div><div></div></div></div>
+    
+    <script type="text/javascript">
+      function actualizarNombre(){
+        var actualizo = localStorage.getItem("usuario");
+        var cantidadCarrito = localStorage.getItem("productosEnCarro");
+        document.getElementById("username").innerHTML = " "+ actualizo;
+        document.getElementsByClassName("badge")[0].innerHTML = cantidadCarrito;
+        
+      }
+      actualizarNombre();
+    </script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+  
+  </html>
