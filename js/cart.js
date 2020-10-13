@@ -50,7 +50,13 @@ function finalizarCompra(){
     var numero = document.getElementById("numero").value;
     var departamento = document.getElementById("departamento").value;
     var localidad = document.getElementById("localidad").value;
-    if (direccion != "" && numero !="" && departamento !="" && localidad !=""){
+    var cardNumber = document.getElementById("cardNumber").value;
+    var cvv = document.getElementById("cvv").value;
+    var expire = document.getElementById("expire").value;
+    var name = document.getElementById("name").value;
+    var cedula = document.getElementById("cedula").value;
+    if (direccion != "" && numero !="" && departamento !="" && localidad !=""&& cardNumber !="" &&
+     cvv !="" && expire !="" & name !=""&& cedula !=""){
         alert("Su compra a sido Exitosa")
     }
     else {
